@@ -8,7 +8,7 @@ const main = () => {
     restaurants.restaurants.forEach((restaurant) => {
       const { id, name, description, pictureId, city, rating } = restaurant;
       const component = `
-        <div class="list-restaurant-item">
+        <div class="list-restaurant-item" tabindex="0">
           <div class="list-restaurant-item__image">
             <img src="${pictureId}" width="100%" alt="" />
             <div class="list-restaurant-item__rating">
