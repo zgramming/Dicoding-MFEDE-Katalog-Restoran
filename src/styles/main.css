@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800;900&family=Hind+Madurai:wght@300;400;500;600;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  /* Header */
+  /* font-family: 'Exo 2', sans-serif; */
+
+  font-family: 'Hind Madurai', sans-serif;
+  font-size: 12px;
+  color: #424242;
+}
+
+/* Header Section */
+header {
+  background-color: #fcb07c;
+}
+
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20pt;
+}
+
+.navigation div a {
+  color: black;
+  font-size: 14pt;
+  text-decoration: none;
+}
+
+.header {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+}
+
+.text-logo a {
+  color: black;
+  text-decoration: none;
+}
+
+.button-open-drawer {
+  display: none;
+}
+
+.button-close-drawer {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+}
+
+.drawer {
+  position: fixed;
+  width: 0;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color: #fcb07c;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+/* Main Section */
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero {
+  min-width: 1000px;
+  height: 80vh;
+}
+
+.list-restaurant {
+  margin: 0px auto;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.list-restaurant-item {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.list-restaurant-item__image {
+  flex-basis: 100%;
+  position: relative;
+}
+
+.list-restaurant-item__image img {
+  width: 100%;
+  min-height: 200px;
+  border-radius: 10%;
+}
+
+.list-restaurant-item__rating {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-weight: bold;
+  background-color: black;
+  color: gold;
+  padding: 5px;
+  border-radius: 10%;
+  font-size: 10pt;
+
+  display: flex;
+  justify-items: center;
+  gap: 5px;
+}
+
+.list-restaurant-item__content {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.list-restaurant-item__title {
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+.list-restaurant-item__description {
+  font-size: 10pt;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.list-restaurant-item__location {
+  display: flex;
+  align-items: center;
+  font-size: 10pt;
+  gap: 10px;
+}
+
+/* Footer Section */
+
+.footer {
+  margin-top: 20px;
+  background-color: #fcb07c;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Breakpoint Mobile & Tablet */
+@media screen and (max-width: 1200px) {
+  /* Header Section */
+  .navigation {
+    display: none;
+  }
+
+  .drawer .header {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    align-items: start;
+  }
+
+  .drawer .logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .drawer .navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 20pt;
+    padding: 1rem;
+  }
+
+  .button-open-drawer {
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Main Section */
+  .hero {
+    min-width: 100%;
+    height: 100%;
+  }
+
+  .list-restaurant {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 10px;
+    max-width: 100%;
+  }
+
+  .list-restaurant-item {
+    flex-direction: row;
+  }
+
+  .list-restaurant-item__image {
+    flex-basis: 30%;
+  }
+
+  .list-restaurant-item__image img {
+    min-height: 80px;
+  }
+
+  .list-restaurant-item__rating {
+    top: 5px;
+    right: 5px;
+    font-size: 7pt;
+  }
+
+  .list-restaurant-item__content {
+    flex-basis: 70%;
+    gap: 5px;
+  }
+
+  .list-restaurant-item__title {
+    font-size: 10pt;
+  }
+
+  .list-restaurant-item__description {
+    font-size: 8pt;
+  }
+
+  .list-restaurant-item__location {
+    font-size: 8pt;
+    gap: 5px;
+  }
+
+  /* Footer Section */
+}
+
+/* Tablet */
+@media screen and (max-width: 1000px) {
+  .list-restaurant {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+  .list-restaurant {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
