@@ -23,6 +23,21 @@ body {
   color: #424242;
 }
 
+/* Skip to Content */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: black;
+  color: gold;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 /* Header Section */
 header {
   background-color: #fcb07c;
@@ -214,7 +229,7 @@ main {
   }
 
   .list-restaurant {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     margin: 0 10px;
     max-width: 100%;
   }
