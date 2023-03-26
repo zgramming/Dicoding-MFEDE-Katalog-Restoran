@@ -112,7 +112,7 @@ class DrawerComponent extends LitElement {
         <div class="header">
           <div class="logo">
             <h1 class="text-logo"><a href="#">Resto Apps</a></h1>
-            <button class="button-close-drawer" id="button-close-drawer" @click="${this._onDrawerClose}">Tutup</button>
+            <button class="button-close-drawer" id="button-close-drawer" @click="${this._onDrawerClose}">❌</button>
           </div>
           <nav class="navigation">
             <div><a href="/">Home</a></div>
