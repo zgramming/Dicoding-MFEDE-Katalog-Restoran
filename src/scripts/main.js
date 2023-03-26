@@ -1,14 +1,12 @@
-import $ from 'jquery';
-
-import restaurants from '../DATA.json';
+import datas from '../DATA.json';
 
 import './components/DrawerComponent';
 
 const main = () => {
   // const BASE_URL = 'https://restaurant-api.dicoding.dev/v1';
   const fetchRestaurant = () => {
-    const restaurantList = $('#restaurant-list');
-    restaurants.restaurants.forEach((restaurant) => {
+    const restaurantList = document.querySelector('#restaurant-list');
+    datas.restaurants.forEach((restaurant) => {
       const { name, description, pictureId, city, rating } = restaurant;
 
       const component = `
@@ -30,7 +28,7 @@ const main = () => {
           </div>
         </div>
       `;
-      restaurantList.append(component);
+      restaurantList.innerHTML += component;
     });
   };
 
