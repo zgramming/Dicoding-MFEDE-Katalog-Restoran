@@ -13,7 +13,6 @@ const HomePage = {
   },
 
   async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
     const { data: dataRequest } = await axios.get(`${BASE_URL}/list`);
     const { restaurants } = dataRequest;
     const restaurantList = document.querySelector('#restaurant-list');

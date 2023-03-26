@@ -11,6 +11,12 @@ class DrawerComponent extends LitElement {
     this.renderRoot.getElementById('drawer').style.width = '0';
   }
 
+  _onAnchorClick(event) {
+    event.preventDefault();
+    this.renderRoot.getElementById('drawer').style.width = '0';
+    window.location.href = event.currentTarget.href;
+  }
+
   static styles = css`
     header {
       background-color: #fcb07c;
@@ -110,24 +116,28 @@ class DrawerComponent extends LitElement {
       <div class="drawer" id="drawer">
         <div class="header">
           <div class="logo">
-            <h1 class="text-logo"><a href="#">Resto Apps</a></h1>
+            <h1 class="text-logo"><a href="/">Resto Apps</a></h1>
             <button class="button-close-drawer" id="button-close-drawer" @click="${this._onDrawerClose}">❌</button>
           </div>
           <nav class="navigation">
-            <div><a href="/">Home</a></div>
-            <div><a href="#/favorite">Favorite</a></div>
-            <div><a href="https://github.com/zgramming" target="_blank">About Us</a></div>
+            <div><a @click="${this._onAnchorClick}" href="/">Home</a></div>
+            <div><a @click="${this._onAnchorClick}" href="#/favorite">Favorite</a></div>
+            <div>
+              <a @click="${this._onAnchorClick}" href="https://github.com/zgramming" target="_blank">About Us</a>
+            </div>
           </nav>
         </div>
       </div>
       <header>
         <div class="header">
-          <h1 class="text-logo"><a href="#">Resto Apps</a></h1>
+          <h1 class="text-logo"><a @click="${this._onAnchorClick}" href="/">Resto Apps</a></h1>
           <button class="button-open-drawer" id="button-open-drawer" @click="${this._onDrawerOpen}">🪟</button>
           <nav class="navigation">
-            <div><a href="/">Home</a></div>
-            <div><a href="#/favorite">Favorite</a></div>
-            <div><a href="https://github.com/zgramming" target="_blank">About Us</a></div>
+            <div><a @click="${this._onAnchorClick}" href="/">Home</a></div>
+            <div><a @click="${this._onAnchorClick}" href="#/favorite">Favorite</a></div>
+            <div>
+              <a @click="${this._onAnchorClick}" href="https://github.com/zgramming" target="_blank">About Us</a>
+            </div>
           </nav>
         </div>
       </header>
