@@ -72,7 +72,7 @@ const createRestaurantDetailTemplate = (restaurant) => {
   const componentReviews = createRestaurantCustomerReviews(customerReviews);
 
   const component = `
-    <img
+      <img
         class="detail-restaurant__image-hero"
         src="${image}"
         width="100%"
@@ -136,7 +136,6 @@ const createRestaurantDetailTemplate = (restaurant) => {
           </form>
         </div>
       </div>
-      <button class="detail-restaurant__favorite">🤍</button>
   `;
 
   return component;
