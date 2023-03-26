@@ -4,7 +4,6 @@ class DrawerComponent extends LitElement {
   _onDrawerOpen(event) {
     event.preventDefault();
     this.renderRoot.getElementById('drawer').style.width = '100%';
-    // $('#drawer').css('width', '1F00%');
   }
 
   _onDrawerClose(event) {
@@ -116,7 +115,7 @@ class DrawerComponent extends LitElement {
           </div>
           <nav class="navigation">
             <div><a href="/">Home</a></div>
-            <div><a href="#">Favorite</a></div>
+            <div><a href="#/favorite">Favorite</a></div>
             <div><a href="https://github.com/zgramming" target="_blank">About Us</a></div>
           </nav>
         </div>
@@ -127,7 +126,7 @@ class DrawerComponent extends LitElement {
           <button class="button-open-drawer" id="button-open-drawer" @click="${this._onDrawerOpen}">🪟</button>
           <nav class="navigation">
             <div><a href="/">Home</a></div>
-            <div><a href="#">Favorite</a></div>
+            <div><a href="#/favorite">Favorite</a></div>
             <div><a href="https://github.com/zgramming" target="_blank">About Us</a></div>
           </nav>
         </div>

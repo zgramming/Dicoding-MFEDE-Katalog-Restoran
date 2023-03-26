@@ -1,0 +1,168 @@
+.detail-restaurant {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+}
+
+.detail-restaurant__content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.detail-restaurant__image-hero {
+  min-width: 1000px;
+}
+
+.detail-restaurant__rating-lokasi {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5 px 0;
+}
+
+.detail-restaurant__rating {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+}
+
+.detail-restaurant__lokasi {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+}
+
+.detail-restaurant__food-drink {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.detail-restaurant__food,
+.detail-restaurant__drink {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.detail-restaurant__food-list,
+.detail-restaurant__drink-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.detail-restaurant__food-item,
+.detail-restaurant__drink-item {
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid orange;
+  background-color: transparent;
+  font-size: 8pt;
+}
+
+/* Review */
+
+.detail-restaurant__review {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.detail-restaurant__review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.detail-restaurant__review-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.detail-restaurant__review-item__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.detail-restaurant__review-item__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #e0e0e0;
+  border-radius: 100%;
+}
+
+.detail-restaurant__review-item__name {
+  flex-grow: 1;
+  font-weight: bold;
+}
+
+.detail-restaurant__review-item__date {
+  font-size: 8pt;
+}
+
+/* Add Review */
+.detail-restaurant__add-review {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px 0;
+}
+
+.detail-restaurant__add-review-form__input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.detail-restaurant__add-review-form__input input,
+textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+}
+
+.button-review {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: gainsboro;
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+}
+
+.detail-restaurant__favorite {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 20pt;
+
+  background-color: orange;
+  color: white;
+  border-radius: 100%;
+  padding: 10px;
+  border: 1px solid orange;
+}
+
+@media screen and (max-width: 1200px) {
+  .detail-restaurant__image-hero {
+    height: 200px;
+    min-width: 100%;
+  }
+}
