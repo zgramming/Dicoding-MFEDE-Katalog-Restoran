@@ -1,8 +1,8 @@
 .detail-restaurant {
   display: flex;
   flex-direction: column;
-
   position: relative;
+  padding: 20px 0;
 }
 
 .detail-restaurant__content {
@@ -147,6 +147,12 @@ textarea {
   font-weight: bold;
 }
 
+.button-review:hover {
+  background-color: #ff6f00;
+  border: 1px solid #ff6f00;
+  cursor: pointer;
+}
+
 .detail-restaurant__favorite {
   position: fixed;
   bottom: 20px;
@@ -164,5 +170,9 @@ textarea {
   .detail-restaurant__image-hero {
     height: 200px;
     min-width: 100%;
+  }
+
+  .detail-restaurant {
+    padding: 0;
   }
 }
