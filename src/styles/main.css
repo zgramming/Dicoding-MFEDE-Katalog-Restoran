@@ -38,62 +38,6 @@ body {
   top: 0;
 }
 
-/* Header Section */
-header {
-  background-color: #fcb07c;
-}
-
-.navigation {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20pt;
-}
-
-.navigation div a {
-  color: black;
-  font-size: 14pt;
-  text-decoration: none;
-  padding: 10px;
-}
-
-.header {
-  margin: 0 auto;
-  max-width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-  align-items: center;
-}
-
-.text-logo a {
-  color: black;
-  text-decoration: none;
-  padding: 10px;
-}
-
-.button-open-drawer {
-  display: none;
-}
-
-.button-close-drawer {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  width: 44px;
-  height: 44px;
-}
-
-.drawer {
-  position: fixed;
-  width: 0;
-  top: 0;
-  right: 0;
-  height: 100%;
-  background-color: #fcb07c;
-  z-index: 1;
-  transition: 0.5s;
-}
-
 /* Main Section */
 main {
   min-height: 100vh;
@@ -189,41 +133,6 @@ main {
 
 /* Breakpoint Mobile & Tablet */
 @media screen and (max-width: 1200px) {
-  /* Header Section */
-  .navigation {
-    display: none;
-  }
-
-  .drawer .header {
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
-    align-items: start;
-  }
-
-  .drawer .logo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-
-  .drawer .navigation {
-    display: flex;
-    flex-direction: column;
-    gap: 20pt;
-    padding: 1rem;
-  }
-
-  .button-open-drawer {
-    display: block;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    width: 44px;
-    height: 44px;
-  }
-
   /* Main Section */
   .hero {
     min-width: 100%;

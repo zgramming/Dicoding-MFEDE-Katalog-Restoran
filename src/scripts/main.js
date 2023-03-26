@@ -2,11 +2,15 @@ import $ from 'jquery';
 
 import restaurants from '../DATA.json';
 
+import './components/DrawerComponent';
+
 const main = () => {
+  // const BASE_URL = 'https://restaurant-api.dicoding.dev/v1';
   const fetchRestaurant = () => {
     const restaurantList = $('#restaurant-list');
     restaurants.restaurants.forEach((restaurant) => {
-      const { id, name, description, pictureId, city, rating } = restaurant;
+      const { name, description, pictureId, city, rating } = restaurant;
+
       const component = `
         <div class="list-restaurant-item" tabindex="0">
           <div class="list-restaurant-item__image">
@@ -29,14 +33,6 @@ const main = () => {
       restaurantList.append(component);
     });
   };
-
-  $('#button-open-drawer').on('click', function () {
-    $('#drawer').css('width', '100%');
-  });
-
-  $('#button-close-drawer').on('click', function () {
-    $('#drawer').css('width', '0');
-  });
 
   document.addEventListener('DOMContentLoaded', () => {
     fetchRestaurant();
