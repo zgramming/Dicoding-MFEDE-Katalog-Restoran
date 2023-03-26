@@ -2,7 +2,8 @@
     "env": {
         "browser": true,
         "es2021": true,
-        "node": true
+        "node": true,
+        "jest": true
     },
     "extends": "airbnb-base",
     "overrides": [
@@ -17,7 +18,5 @@
         "no-console": 0,
         "no-underscore-dangle": 0,
         "object-curly-newline": "off"
-
-
     }
 }

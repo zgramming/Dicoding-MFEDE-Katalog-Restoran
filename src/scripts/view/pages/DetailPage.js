@@ -2,7 +2,7 @@ import axios from 'axios';
 import { BASE_URL } from '../../utils/constant';
 import UrlParser from '../../routes/url-parser';
 import { createRestaurantDetailTemplate } from '../template/TemplateCreator';
-import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
+import LikeButtonInitiator from '../../utils/like-button-initiator';
 
 const _fetchRestaurantDetail = async () => {
   const { id } = UrlParser.parseActiveUrlWithoutCombiner();
@@ -15,26 +15,10 @@ const _fetchRestaurantDetail = async () => {
 const DetailPage = {
   async _renderFavoriteButton(restaurant) {
     const button = document.querySelector('#button-favorite');
-    const { id } = restaurant;
-    const result = await FavoriteRestaurantIdb.getRestaurant(id);
-    const isRestaurantExist = !!result;
 
-    if (isRestaurantExist) {
-      button.innerHTML = '❤️';
-    } else {
-      button.innerHTML = '🤍';
-    }
-
-    button.addEventListener('click', async () => {
-      if (isRestaurantExist) {
-        await FavoriteRestaurantIdb.deleteRestaurant(id);
-        button.innerHTML = '🤍';
-      } else {
-        await FavoriteRestaurantIdb.putRestaurant(restaurant);
-        button.innerHTML = '❤️';
-      }
-
-      this._renderFavoriteButton(restaurant);
+    LikeButtonInitiator.init({
+      likeButtonContainer: button,
+      favoriteRestaurant: restaurant,
     });
   },
 
@@ -63,7 +47,7 @@ const DetailPage = {
   async render() {
     return `
     <div class="container detail-restaurant" id="detail-restaurant"></div>
-    <button class="detail-restaurant__favorite" id="button-favorite">🤍</button>
+    <button class="detail-restaurant__favorite" id="button-favorite" aria-label="like this restaurant">🤍</button>
     `;
   },
 
@@ -74,7 +58,6 @@ const DetailPage = {
     const { restaurant } = dataRequest;
     const detailRestaurant = document.querySelector('#detail-restaurant');
     detailRestaurant.innerHTML = createRestaurantDetailTemplate(restaurant);
-
     this._renderFavoriteButton(restaurant);
     this._addReview();
   },
