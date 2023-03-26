@@ -123,7 +123,7 @@ const createRestaurantDetailTemplate = (restaurant) => {
 
         <div class="detail-restaurant__add-review">
           <h3>Tambahkan Ulasan</h3>
-          <form action="" class="detail-restaurant__add-review-form">
+          <form id="form-review" class="detail-restaurant__add-review-form">
             <div class="detail-restaurant__add-review-form__input">
               <label for="name">Nama</label>
               <input type="text" id="name" name="name" />
