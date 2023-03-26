@@ -28,6 +28,18 @@ body {
   margin: 0 auto;
 }
 
+.button-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10pt;
+  color: #424242;
+  font-weight: bold;
+  min-height: 44px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
 /* Skip to Content */
 .skip-link {
   position: absolute;

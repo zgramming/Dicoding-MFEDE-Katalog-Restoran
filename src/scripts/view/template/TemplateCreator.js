@@ -20,7 +20,7 @@ const createRestaurantItemTemplate = (restaurant) => {
             <p>${city}</p>
           </div>
           <div class="list-restaurant-item__action">
-            <a href="#/detail/${restaurant.id}" class="btn btn--primary">Detail</a>
+            <a href="#/detail/${restaurant.id}" class="button-detail">Detail</a>
           </div>
         </div>
       </div>

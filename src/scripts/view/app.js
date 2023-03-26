@@ -13,6 +13,11 @@ class App {
     const render = await page.render();
     this._content.innerHTML = `${render}`;
     await page.afterRender();
+    const skipLinkElem = document.querySelector('.skip-link');
+    skipLinkElem.addEventListener('click', (event) => {
+      event.preventDefault();
+      document.querySelector('#maincontent').focus();
+    });
   }
 }
 

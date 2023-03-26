@@ -145,6 +145,7 @@ textarea {
   background-color: orange;
   color: white;
   font-weight: bold;
+  min-height: 44px;
 }
 
 .button-review:hover {
