@@ -20,8 +20,8 @@ class HeroComponent extends LitElement {
     return html` <div class="hero">
       <picture>
         <source media="(max-width: 600px)" srcset="./images/heros/hero-image_4-small.jpg" />
+        <img loading="lazy" src="./images/heros/hero-image_4-large.jpg" width="100%" height="100%" alt="Hero Image" />
       </picture>
-      <img loading="lazy" src="./images/heros/hero-image_4-large.jpg" width="100%" height="100%" alt="Hero Image" />
     </div>`;
   }
 }
