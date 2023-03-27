@@ -4,65 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Menjelajahi berbagai restoran di seluruh dunia dengan Resto Apps" />
+    <meta name="theme-color" content="#fcb07c" />
+
+    <link rel="apple-touch-icon" href="/icons/restaurant-256.png" />
+    <link rel="manifest" href="/app.manifest" />
 
     <title>Resto Apps Starter Project</title>
   </head>
+
+  <style></style>
   <body>
     <a href="#maincontent" class="skip-link">Menuju ke konten</a>
-    <div class="drawer" id="drawer">
-      <div class="header">
-        <div class="logo">
-          <h1 class="text-logo"><a href="#">Resto Apps</a></h1>
-          <button class="button-close-drawer" id="button-close-drawer">
-            <i class="fas fa-times fa-2x"></i>
-          </button>
-        </div>
-        <nav class="navigation">
-          <div><a href="/">Home</a></div>
-          <div><a href="#">Favorite</a></div>
-          <div><a href="https://github.com/zgramming" target="_blank">About Us</a></div>
-        </nav>
-      </div>
-    </div>
-    <header>
-      <div class="header">
-        <h1 class="text-logo"><a href="#">Resto Apps</a></h1>
-        <button class="button-open-drawer" id="button-open-drawer">
-          <i class="fas fa-bars fa-2x"></i>
-        </button>
-        <nav class="navigation">
-          <div><a href="/">Home</a></div>
-          <div><a href="#">Favorite</a></div>
-          <div><a href="https://github.com/zgramming" target="_blank">About Us</a></div>
-        </nav>
-      </div>
-    </header>
-    <main id="maincontent">
-      <div class="hero">
-        <img src="./images/heros/hero-image_4.jpg" width="100%" height="100%" alt="" />
-      </div>
-      <div class="list-restaurant" id="restaurant-list">
-        <!-- <div class="list-restaurant-item">
-          <div class="list-restaurant-item__image">
-            <img src="https://restaurant-api.dicoding.dev/images/medium/41" width="100%" alt="" />
-            <div class="list-restaurant-item__rating">
-              <i class="fas fa-star"></i>
-              <p>4.5</p>
-            </div>
-          </div>
-          <div class="list-restaurant-item__content">
-            <h3 class="list-restaurant-item__title">Nama Restaurant</h3>
-            <p class="list-restaurant-item__description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quae, voluptate, quod, voluptas
-              quibusdam voluptates quidem voluptatum quos quia quas nesciunt. Quisquam, quibusdam. </p>
-            <div class="list-restaurant-item__location">
-              <i class="fas fa-map-marker-alt"></i>
-              <p>Malang</p>
-            </div>
-          </div>
-        </div> -->
-      </div>
-    </main>
+    <drawer-component></drawer-component>
+
+    <main id="maincontent" tabindex="0"></main>
     <footer>
       <div class="footer">
         <p>© 2022 Resto Apps</p>
