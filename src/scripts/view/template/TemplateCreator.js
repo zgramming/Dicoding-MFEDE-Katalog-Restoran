@@ -6,7 +6,7 @@ const createRestaurantItemTemplate = (restaurant) => {
   const component = `
       <div class="list-restaurant-item" tabindex="0">
         <div class="list-restaurant-item__image">
-          <img src="${image}" width="100%" alt="" />
+          <img loading="lazy" src="./placeholder.png" data-src="${image}" width="100%" alt="${name}" class="lazyload" />
           <div class="list-restaurant-item__rating">
             <i class="fas fa-star"></i>
             <p>${parseFloat(rating).toFixed(1)}</p>
@@ -73,10 +73,12 @@ const createRestaurantDetailTemplate = (restaurant) => {
 
   const component = `
       <img
-        class="detail-restaurant__image-hero"
-        src="${image}"
+        loading="lazy"
+        src="./placeholder.png"
+        class="detail-restaurant__image-hero lazyload"
+        data-src="${image}"
         width="100%"
-        alt=""
+        alt="Detail Restaurant Image"
       />
       <div class="detail-restaurant__content">
         <h1 class="detail-restaurant__name">${name}</h1>
