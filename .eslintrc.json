@@ -1,10 +1,13 @@
 {
+    "plugins": [
+        "codeceptjs"
+    ],
     "env": {
         "browser": true,
         "es2021": true,
         "node": true,
         "jest": true,
-        "codeceptjs": true
+        "codeceptjs/codeceptjs": true  
     },
     "extends": "airbnb-base",
     "overrides": [
